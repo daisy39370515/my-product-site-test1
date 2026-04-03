@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Solar Lighting Manufacturer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav a:hover {
+            background: #34495e;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .section {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .value-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .value-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .value-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .timeline {
+            margin-top: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: #667eea;
+        }
+        
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.35rem;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #667eea;
+        }
+        
+        .timeline-year {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+        
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+        
+        .timeline-content h4 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-content p {
+            color: #666;
+            font-size: 1rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .team-avatar {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+        }
+        
+        .team-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+        
+        .team-card .role {
+            color: #667eea;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .team-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer a {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section {
+                padding: 2rem 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .timeline {
+                padding-left: 1.5rem;
+            }
+            
+            .timeline-item::before {
+                left: -1.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ℹ️ About Us</h1>
+        <p>Your Trusted Partner in Solar Lighting Solutions</p>
+    </div>
+    
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html">🏠 Home</a>
+            <a href="products.html">📦 Products</a>
+            <a href="about.html">ℹ️ About Us</a>
+            <a href="contact.html">📞 Contact</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- Company Introduction -->
+        <section class="section">
+            <h2>🌟 Who We Are</h2>
+            <div class="intro-text">
+                <p>
+                    Founded in 2010, <strong>Your Company Name</strong> is a leading manufacturer and supplier of high-quality solar lighting solutions. With over 15 years of experience in the solar energy industry, we specialize in designing, developing, and producing innovative solar lighting products for residential, commercial, and industrial applications worldwide.
+                </p>
+                <p>
+                    Our mission is to provide sustainable, energy-efficient lighting solutions that reduce carbon footprint while delivering exceptional performance and reliability. We serve B2B customers across more than 80 countries, including solar lighting distributors, contractors, project developers, and government agencies.
+                </p>
+                <p>
+                    With state-of-the-art manufacturing facilities and a dedicated R&D team, we continuously innovate to meet the evolving needs of the global solar lighting market. Our products undergo rigorous quality control processes to ensure they meet international standards and exceed customer expectations.
+                </p>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">80+</div>
+                    <div class="stat-label">Countries Served</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Happy B2B Clients</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-number">1M+</div>
+                    <div class="stat-label">Products Delivered</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Values -->
+        <section class="section">
+            <h2>💎 Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🌱</div>
+                    <h3>Sustainability</h3>
+                    <p>We are committed to environmental protection through renewable energy solutions. Our products help reduce carbon emissions and promote green living worldwide.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">⚙️</div>
+                    <h3>Innovation</h3>
+                    <p>Continuous innovation drives our business. We invest heavily in R&D to develop cutting-edge solar lighting technologies that set industry standards.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Integrity</h3>
+                    <p>We conduct business with honesty, transparency, and ethical standards. Trust and long-term partnerships are at the core of our operations.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🏆</div>
+                    <h3>Quality</h3>
+                    <p>Quality is non-negotiable. Every product undergoes strict quality control to ensure durability, performance, and customer satisfaction.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Customer Focus</h3>
+                    <p>Our customers are our priority. We provide personalized solutions, excellent support, and responsive service to meet your unique needs.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h3>Excellence</h3>
+                    <p>We strive for excellence in everything we do – from product design to customer service, we aim to exceed expectations at every touchpoint.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Company History -->
+        <section class="section">
+            <h2>📅 Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h4>Company Founded</h4>
+                        <p>Established in [Your City], China, with a vision to provide affordable and reliable solar lighting solutions. Started with a small team of 5 engineers and one product line.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2013</div>
+                    <div class="timeline-content">
+                        <h4>First International Expansion</h4>
+                        <p>Expanded into Southeast Asian and Middle Eastern markets. Obtained ISO 9001 certification for quality management systems.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2016</div>
+                    <div class="timeline-content">
+                        <h4>R&D Center Established</h4>
+                        <p>Opened dedicated R&D center with 20 engineers. Introduced intelligent solar lighting solutions with smart control systems.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2019</div>
+                    <div class="timeline-content">
+                        <h4>Global Growth Milestone</h4>
+                        <p>Reached 50+ countries market coverage. Annual production capacity exceeded 500,000 units. Expanded product portfolio to 10+ categories.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2022</div>
+                    <div class="timeline-content">
+                        <h4>Sustainability Leadership</h4>
+                        <p>Achieved carbon-neutral manufacturing certification. Launched eco-friendly product lines with recyclable materials. Partnered with UN sustainable development initiatives.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2026</div>
+                    <div class="timeline-content">
+                        <h4>Industry Leader</h4>
+                        <p>Today, we are recognized as a top-tier solar lighting manufacturer globally. Serving 80+ countries with 500+ B2B partners. Committed to driving the renewable energy revolution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Our Team -->
+        <section class="section">
+            <h2>👥 Leadership Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💼</div>
+                    <h3>[Your Name]</h3>
+                    <span class="role">Founder & CEO</span>
+                    <p>Visionary leader with 20+ years in renewable energy. Passionate about sustainable lighting solutions and global business development.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">👩‍🔬</div>
+                    <h3>[Name]</h3>
+                    <span class="role">Chief Technology Officer</span>
+                    <p>Expert in solar energy systems with 15+ years R&D experience. Leads our innovation strategy and product development.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">👨‍💻</div>
+                    <h3>[Name]</h3>
+                    <span class="role">VP of Global Sales</span>
+                    <p>International business development specialist. Manages our global B2B relationships and market expansion strategies.</p>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-avatar">👩‍💼</div>
+                    <h3>[Name]</h3>
+                    <span class="role">Director of Operations</span>
+                    <p>Supply chain and manufacturing expert. Ensures efficient production and quality control across our facilities.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Why Choose Us -->
+        <section class="section">
+            <h2>✨ Why Choose Us</h2>
+            <div class="intro-text">
+                <p>When you partner with us, you gain more than just a supplier – you gain a strategic ally committed to your success. Here's what sets us apart:</p>
+                <ul style="margin-top: 1.5rem; padding-left: 2rem; color: #555; line-height: 2;">
+                    <li><strong>✅ OEM/ODM Capabilities</strong> - Custom solutions tailored to your market needs</li>
+                    <li><strong>✅ Competitive Pricing</strong> - Factory-direct prices with no middleman</li>
+                    <li><strong>✅ Fast Delivery</strong> - Efficient logistics and global shipping network</li>
+                    <li><strong>✅ Technical Support</strong> - Expert guidance from product selection to installation</li>
+                    <li><strong>✅ Quality Assurance</strong> - Strict quality control and comprehensive warranties</li>
+                    <li><strong>✅ After-Sales Service</strong> - Dedicated support team for all your needs</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2026 Solar Lighting Manufacturer | Professional B2B Solar Lighting Solutions</p>
+        <p>📧 <a href="mailto:sales@yourcompany.com">sales@yourcompany.com</a> | 📱 +86-XXX-XXXX-XXXX</p>
+        <p style="margin-top: 1rem; opacity: 0.8;">🌍 Global Shipping | ✅ OEM/ODM Available | 🔧 2-5 Years Warranty</p>
+    </footer>
+</body>
+</html>
