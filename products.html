@@ -19,7 +19,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3498db 0%, #ecf0f1 100%);
             color: white;
             padding: 3rem 1rem;
             text-align: center;
@@ -32,7 +32,7 @@
         
         .header p {
             font-size: 1.2rem;
-            opacity: 0.9;
+            opacity: 0.95;
         }
         
         .nav {
@@ -41,6 +41,7 @@
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .nav-container {
@@ -80,7 +81,7 @@
         
         .category h2 {
             color: #2c3e50;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #3498db;
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
             font-size: 2rem;
@@ -107,10 +108,12 @@
         
         .product-image {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
+            object-position: center;
             background: #f5f5f5;
             display: block;
+            image-rendering: -webkit-optimize-contrast;
         }
         
         .product-info {
@@ -118,7 +121,7 @@
         }
         
         .product-info .model {
-            color: #667eea;
+            color: #3498db;
             font-weight: bold;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
@@ -147,13 +150,13 @@
             content: "•";
             position: absolute;
             left: 0;
-            color: #667eea;
+            color: #3498db;
             font-weight: bold;
         }
         
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
             padding: 0.8rem 2rem;
             text-decoration: none;
@@ -166,7 +169,7 @@
         
         .cta-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
         }
         
         .footer {
@@ -178,7 +181,7 @@
         }
         
         .footer a {
-            color: #667eea;
+            color: #3498db;
         }
         
         @media (max-width: 768px) {
@@ -212,6 +215,12 @@
             <a href="#wall-lights">💡 Wall Lights</a>
             <a href="#pillar-lights">🔆 Pillar Lights</a>
             <a href="#wall-washer">🎨 Wall Washer</a>
+            <a href="#street-lights">🚦 Street Lights</a>
+            <a href="#split-street-lights">🔌 Split Street Lights</a>
+            <a href="#solar-street-lights">☀️ Solar Street Lights</a>
+            <a href="#mains-street-lights">⚡ Mains Street Lights</a>
+            <a href="#solar-flood-lights">🔦 Solar Flood Lights</a>
+            <a href="#portable-lights">🔦 Portable Lights</a>
         </div>
     </nav>
     
@@ -221,7 +230,7 @@
             <h2>🏡 Courtyard Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="images/courtyard-lights/1.jpg" alt="Courtyard Light" class="product-image" onerror="this.onerror=null; this.src='images/courtyard-lights/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/庭院灯/1.jpg" alt="Courtyard Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-TYD1218</span>
                         <h3>Ark Courtyard Light</h3>
@@ -236,7 +245,7 @@
                 </div>
                 
                 <div class="product-card">
-                    <img src="images/courtyard-lights/2.jpg" alt="Courtyard Light" class="product-image" onerror="this.onerror=null; this.src='images/courtyard-lights/3.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/庭院灯/2.jpg" alt="Courtyard Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-TYD1219</span>
                         <h3>Modern Courtyard Light</h3>
@@ -251,7 +260,7 @@
                 </div>
                 
                 <div class="product-card">
-                    <img src="images/courtyard-lights/3.jpg" alt="Courtyard Light" class="product-image" onerror="this.onerror=null; this.src='images/courtyard-lights/4.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/庭院灯/3.jpg" alt="Courtyard Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-TYD1220</span>
                         <h3>Elegant Courtyard Light</h3>
@@ -264,6 +273,21 @@
                         <a href="mailto:your-email@example.com?subject=Inquiry about GT-TYD1220" class="cta-button">Request Quote</a>
                     </div>
                 </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/庭院灯/4.jpg" alt="Courtyard Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TYD1221</span>
+                        <h3>Royal Courtyard Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 30W</div>
+                            <div class="specs-item">Solar Panel: 5V/25W Monocrystalline</div>
+                            <div class="specs-item">Battery: 30AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TYD1221" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -272,7 +296,7 @@
             <h2>🌿 Lawn Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="images/lawn-lights/1.jpg" alt="Lawn Light" class="product-image" onerror="this.onerror=null; this.src='images/lawn-lights/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/草坪灯/1.jpg" alt="Lawn Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-CPD1618</span>
                         <h3>Small Conch Lawn Light</h3>
@@ -287,7 +311,7 @@
                 </div>
                 
                 <div class="product-card">
-                    <img src="images/lawn-lights/2.jpg" alt="Lawn Light" class="product-image" onerror="this.onerror=null; this.src='images/lawn-lights/3.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/草坪灯/2.jpg" alt="Lawn Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-CPD1619</span>
                         <h3>Mushroom Lawn Light</h3>
@@ -302,7 +326,7 @@
                 </div>
                 
                 <div class="product-card">
-                    <img src="images/lawn-lights/3.jpg" alt="Lawn Light" class="product-image" onerror="this.onerror=null; this.src='images/lawn-lights/4.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/草坪灯/3.jpg" alt="Lawn Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-CPD1620</span>
                         <h3>Flower Lawn Light</h3>
@@ -315,6 +339,21 @@
                         <a href="mailto:your-email@example.com?subject=Inquiry about GT-CPD1620" class="cta-button">Request Quote</a>
                     </div>
                 </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/草坪灯/4.jpg" alt="Lawn Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-CPD1621</span>
+                        <h3>Star Lawn Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 3W</div>
+                            <div class="specs-item">Solar Panel: 5V/3W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 12-16 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-CPD1621" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -323,7 +362,7 @@
             <h2>💡 Wall Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="images/wall-lights/1.jpg" alt="Wall Light" class="product-image" onerror="this.onerror=null; this.src='images/wall-lights/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/壁灯/1.jpg" alt="Wall Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-BD1201</span>
                         <h3>Ark Wall Light</h3>
@@ -336,6 +375,36 @@
                         <a href="mailto:your-email@example.com?subject=Inquiry about GT-BD1201" class="cta-button">Request Quote</a>
                     </div>
                 </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/壁灯/2.jpg" alt="Wall Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-BD1202</span>
+                        <h3>Modern Wall Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 8AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-BD1202" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/壁灯/3.jpg" alt="Wall Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-BD1203</span>
+                        <h3>Elegant Wall Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 8AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-BD1203" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -344,7 +413,7 @@
             <h2>🔆 Pillar Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="images/pillar-lights/1.jpg" alt="Pillar Light" class="product-image" onerror="this.onerror=null; this.src='images/pillar-lights/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/柱头灯/1.jpg" alt="Pillar Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-ZTD1201</span>
                         <h3>Ark Pillar Light</h3>
@@ -359,7 +428,7 @@
                 </div>
                 
                 <div class="product-card">
-                    <img src="images/pillar-lights/2.jpg" alt="Pillar Light" class="product-image" onerror="this.onerror=null; this.src='images/pillar-lights/3.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/柱头灯/2.jpg" alt="Pillar Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-ZTD1202</span>
                         <h3>Modern Pillar Light</h3>
@@ -374,7 +443,7 @@
                 </div>
                 
                 <div class="product-card">
-                    <img src="images/pillar-lights/3.jpg" alt="Pillar Light" class="product-image" onerror="this.onerror=null; this.src='images/pillar-lights/4.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <img src="images/产品图/精修图/柱头灯/3.jpg" alt="Pillar Light" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-ZTD1203</span>
                         <h3>Royal Pillar Light</h3>
@@ -387,6 +456,21 @@
                         <a href="mailto:your-email@example.com?subject=Inquiry about GT-ZTD1203" class="cta-button">Request Quote</a>
                     </div>
                 </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/柱头灯/4.jpg" alt="Pillar Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-ZTD1204</span>
+                        <h3>Classic Pillar Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 8AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-ZTD1204" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
             </div>
         </section>
         
@@ -395,7 +479,7 @@
             <h2>🎨 Solar Wall Washer</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="images/wall-washer/1.jpg" alt="Wall Washer" class="product-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/280x250?text=Image+Not+Found';">
+                    <img src="images/产品图/精修图/洗墙灯/1.jpg" alt="Wall Washer" class="product-image">
                     <div class="product-info">
                         <span class="model">Model: GT-XQD1001</span>
                         <h3>Small Wall Washer</h3>
@@ -406,6 +490,398 @@
                             <div class="specs-item">Lighting Time: 15-20 hours</div>
                         </div>
                         <a href="mailto:your-email@example.com?subject=Inquiry about GT-XQD1001" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 路灯 -->
+        <section class="category" id="street-lights">
+            <h2>🚦 Street Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD106-50W.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD106-50W</span>
+                        <h3>Solar Street Light - 50W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 50W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/25W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/20AH Lithium</div>
+                            <div class="specs-item">LED: 50x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD106-50W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD106-120W.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD106-120W</span>
+                        <h3>Solar Street Light - 120W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 120W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/35W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/30AH Lithium</div>
+                            <div class="specs-item">LED: 120x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD106-120W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD106-150W.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD106-150W</span>
+                        <h3>Solar Street Light - 150W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 150W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/40W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/40AH Lithium</div>
+                            <div class="specs-item">LED: 150x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD106-150W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD106-200W.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD106-200W</span>
+                        <h3>Solar Street Light - 200W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 200W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/50W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/50AH Lithium</div>
+                            <div class="specs-item">LED: 200x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD106-200W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD107-100W.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD107-100W</span>
+                        <h3>High Power Street Light - 100W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 100W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/30W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/25AH Lithium</div>
+                            <div class="specs-item">LED: 100x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD107-100W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD107-200W.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD107-200W</span>
+                        <h3>High Power Street Light - 200W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 200W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/50W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/50AH Lithium</div>
+                            <div class="specs-item">LED: 200x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD107-200W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD107-300.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD107-300W</span>
+                        <h3>High Power Street Light - 300W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 300W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/75W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/75AH Lithium</div>
+                            <div class="specs-item">LED: 300x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD107-300W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-TGD107-400W.JPG" alt="Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD107-400W</span>
+                        <h3>High Power Street Light - 400W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 400W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/100W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3.2V/100AH Lithium</div>
+                            <div class="specs-item">LED: 400x 2835</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD107-400W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 分体路灯 -->
+        <section class="category" id="split-street-lights">
+            <h2>🔌 Split Street Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂1.jpg" alt="Split Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-FT114-60W</span>
+                        <h3>Split Street Light - 60W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 60W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/20W (350*400mm)</div>
+                            <div class="specs-item">Battery: 3.2V/15AH Lithium</div>
+                            <div class="specs-item">LED: 60x 3030</div>
+                            <div class="specs-item">Coverage: 230㎡</div>
+                            <div class="specs-item">Pole Diameter: Φ50mm</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-FT114-60W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂2.jpg" alt="Split Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-FT114-100W</span>
+                        <h3>Split Street Light - 100W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 100W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/25W (350*530mm)</div>
+                            <div class="specs-item">Battery: 3.2V/20AH Lithium</div>
+                            <div class="specs-item">LED: 100x 3030</div>
+                            <div class="specs-item">Coverage: 250㎡</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-FT114-100W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂3.jpg" alt="Split Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-FT114-120W</span>
+                        <h3>Split Street Light - 120W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 120W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/30W (350*600mm)</div>
+                            <div class="specs-item">Battery: 3.2V/25AH Lithium</div>
+                            <div class="specs-item">LED: 120x 3030</div>
+                            <div class="specs-item">Coverage: 270㎡</div>
+                            <div class="specs-item">Pole Diameter: Φ60mm</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-FT114-120W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 太阳能路灯 -->
+        <section class="category" id="solar-street-lights">
+            <h2>☀️ Solar Street Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂4.jpg" alt="Solar Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: Human Arm - 60W</span>
+                        <h3>Solar Street Light - Human Arm</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 60W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/60W</div>
+                            <div class="specs-item">Battery: 3.2V/65AH Lithium</div>
+                            <div class="specs-item">LED: 100x 3030</div>
+                            <div class="specs-item">Pole: 5.8m Human Arm</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about Human Arm 60W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂5.jpg" alt="Solar Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: Conch Arm - 60W</span>
+                        <h3>Solar Street Light - Conch Arm</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 60W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/60W</div>
+                            <div class="specs-item">Battery: 3.2V/65AH Lithium</div>
+                            <div class="specs-item">LED: 100x 3030</div>
+                            <div class="specs-item">Pole: 5.8m Conch Arm</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about Conch Arm 60W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 市电路灯 -->
+        <section class="category" id="mains-street-lights">
+            <h2>⚡ Mains Street Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂6.jpg" alt="Mains Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-LD136-50W</span>
+                        <h3>Mains Street Light - 50W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 50W LED</div>
+                            <div class="specs-item">Voltage: AC100-305V</div>
+                            <div class="specs-item">LED: 72x 3030</div>
+                            <div class="specs-item">Driver: Dongling</div>
+                            <div class="specs-item">Luminous Flux: 150-160 LM/W</div>
+                            <div class="specs-item">Beam Angle: 75°*160°</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-LD136-50W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂7.jpg" alt="Mains Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-LD136-100W</span>
+                        <h3>Mains Street Light - 100W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 100W LED</div>
+                            <div class="specs-item">Voltage: AC100-305V</div>
+                            <div class="specs-item">LED: 144x 3030</div>
+                            <div class="specs-item">Driver: Dongling</div>
+                            <div class="specs-item">Luminous Flux: 150-160 LM/W</div>
+                            <div class="specs-item">Beam Angle: 75°*160°</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-LD136-100W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂8.jpg" alt="Mains Street Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-LD136-150W</span>
+                        <h3>Mains Street Light - 150W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 150W LED</div>
+                            <div class="specs-item">Voltage: AC100-305V</div>
+                            <div class="specs-item">LED: 180x 3030</div>
+                            <div class="specs-item">Driver: Dongling</div>
+                            <div class="specs-item">Luminous Flux: 150-160 LM/W</div>
+                            <div class="specs-item">Beam Angle: 75°*160°</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-LD136-150W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 太阳能投光灯 -->
+        <section class="category" id="solar-flood-lights">
+            <h2>🔦 Solar Flood Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂9.mp4" alt="Solar Flood Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD106-50W</span>
+                        <h3>Solar Flood Light - 50W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 50W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/20W</div>
+                            <div class="specs-item">Battery: 3.2V/15AH Lithium</div>
+                            <div class="specs-item">LED: 50x 2835</div>
+                            <div class="specs-item">Luminous Flux: 170 LM/W</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD106-50W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂10.jpg" alt="Solar Flood Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD106-120W</span>
+                        <h3>Solar Flood Light - 120W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 120W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/25W</div>
+                            <div class="specs-item">Battery: 3.2V/20AH Lithium</div>
+                            <div class="specs-item">LED: 120x 2835</div>
+                            <div class="specs-item">Luminous Flux: 170 LM/W</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD106-120W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/工厂直拍/工厂11.jpg" alt="Solar Flood Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TGD106-150W</span>
+                        <h3>Solar Flood Light - 150W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 150W LED</div>
+                            <div class="specs-item">Solar Panel: 6V/30W</div>
+                            <div class="specs-item">Battery: 3.2V/25AH Lithium</div>
+                            <div class="specs-item">LED: 150x 2835</div>
+                            <div class="specs-item">Luminous Flux: 170 LM/W</div>
+                            <div class="specs-item">Control: Time Control + Remote</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TGD106-150W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 充电手提灯 -->
+        <section class="category" id="portable-lights">
+            <h2>🔦 Portable Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-STD106B.JPG" alt="Portable Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-STD106B-50W</span>
+                        <h3>Rechargeable Portable Light - 50W</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 50W LED</div>
+                            <div class="specs-item">Battery: 3.2V/15AH Lithium</div>
+                            <div class="specs-item">LED: 50x 2835</div>
+                            <div class="specs-item">Luminous Flux: 170 LM/W</div>
+                            <div class="specs-item">Charging: USB Type + DC</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours (full charge)</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-STD106B-50W" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/street-lights-and-hand-lantern/GT-STD107B.JPG" alt="Portable Light" class="product-image">
+                    <div class="product-info">
+                        <span class="model">Model: GT-STD107B</span>
+                        <h3>Professional Portable Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">High Power LED Output</div>
+                            <div class="specs-item">Battery: 3.2V/20AH Lithium</div>
+                            <div class="specs-item">Luminous Flux: 170 LM/W</div>
+                            <div class="specs-item">Charging: USB Type + DC</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours (full charge)</div>
+                            <div class="specs-item">Portable & Durable Design</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-STD107B" class="cta-button">Request Quote</a>
                     </div>
                 </div>
             </div>
