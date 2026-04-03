@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Lighting Products | Solar Lights Manufacturer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .nav {
+            background: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        
+        .nav a:hover {
+            background: #34495e;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .category {
+            margin-bottom: 4rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .category h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: #f5f5f5;
+            display: block;
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info .model {
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .product-info h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .specs {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .specs-item {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .specs-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .cta-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .footer a {
+            color: #667eea;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.5rem;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌟 Solar Lighting Products</h1>
+        <p>Professional Solar Lighting Solutions for Global B2B Customers</p>
+    </div>
+    
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html">🏠 Home</a>
+            <a href="#courtyard-lights">🏡 Courtyard Lights</a>
+            <a href="#lawn-lights">🌿 Lawn Lights</a>
+            <a href="#wall-lights">💡 Wall Lights</a>
+            <a href="#pillar-lights">🔆 Pillar Lights</a>
+            <a href="#wall-washer">🎨 Wall Washer</a>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <!-- 庭院灯 -->
+        <section class="category" id="courtyard-lights">
+            <h2>🏡 Courtyard Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/精修图/庭院灯/1.jpg" alt="Courtyard Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/庭院灯/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TYD1218</span>
+                        <h3>Ark Courtyard Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 30W</div>
+                            <div class="specs-item">Solar Panel: 5V/25W Monocrystalline</div>
+                            <div class="specs-item">Battery: 30AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TYD1218" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/庭院灯/2.jpg" alt="Courtyard Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/庭院灯/3.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TYD1219</span>
+                        <h3>Modern Courtyard Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 30W</div>
+                            <div class="specs-item">Solar Panel: 5V/25W Monocrystalline</div>
+                            <div class="specs-item">Battery: 30AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TYD1219" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/庭院灯/3.jpg" alt="Courtyard Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/庭院灯/4.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-TYD1220</span>
+                        <h3>Elegant Courtyard Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 30W</div>
+                            <div class="specs-item">Solar Panel: 5V/25W Monocrystalline</div>
+                            <div class="specs-item">Battery: 30AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 20-24 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-TYD1220" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 草坪灯 -->
+        <section class="category" id="lawn-lights">
+            <h2>🌿 Lawn Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/精修图/草坪灯/1.jpg" alt="Lawn Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/草坪灯/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-CPD1618</span>
+                        <h3>Small Conch Lawn Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 3W</div>
+                            <div class="specs-item">Solar Panel: 5V/3W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 12-16 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-CPD1618" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/草坪灯/2.jpg" alt="Lawn Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/草坪灯/3.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-CPD1619</span>
+                        <h3>Mushroom Lawn Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 3W</div>
+                            <div class="specs-item">Solar Panel: 5V/3W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 12-16 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-CPD1619" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/草坪灯/3.jpg" alt="Lawn Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/草坪灯/4.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-CPD1620</span>
+                        <h3>Flower Lawn Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 3W</div>
+                            <div class="specs-item">Solar Panel: 5V/3W Monocrystalline</div>
+                            <div class="specs-item">Battery: 3AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 12-16 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-CPD1620" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 壁灯 -->
+        <section class="category" id="wall-lights">
+            <h2>💡 Wall Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/精修图/壁灯/1.jpg" alt="Wall Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/壁灯/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-BD1201</span>
+                        <h3>Ark Wall Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 8AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-BD1201" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 柱头灯 -->
+        <section class="category" id="pillar-lights">
+            <h2>🔆 Pillar Lights</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/精修图/柱头灯/1.jpg" alt="Pillar Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/柱头灯/2.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-ZTD1201</span>
+                        <h3>Ark Pillar Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 8AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-ZTD1201" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/柱头灯/2.jpg" alt="Pillar Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/柱头灯/3.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-ZTD1202</span>
+                        <h3>Modern Pillar Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 8AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-ZTD1202" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <img src="images/产品图/精修图/柱头灯/3.jpg" alt="Pillar Light" class="product-image" onerror="this.onerror=null; this.src='images/产品图/精修图/柱头灯/4.jpg'; this.onerror=function(){this.src='https://via.placeholder.com/280x250?text=Image+Not+Found'};">
+                    <div class="product-info">
+                        <span class="model">Model: GT-ZTD1203</span>
+                        <h3>Royal Pillar Light</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 8AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-ZTD1203" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 洗墙灯 -->
+        <section class="category" id="wall-washer">
+            <h2>🎨 Solar Wall Washer</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="images/产品图/精修图/洗墙灯/1.jpg" alt="Wall Washer" class="product-image" onerror="this.onerror=null; this.src='https://via.placeholder.com/280x250?text=Image+Not+Found';">
+                    <div class="product-info">
+                        <span class="model">Model: GT-XQD1001</span>
+                        <h3>Small Wall Washer</h3>
+                        <div class="specs">
+                            <div class="specs-item">Power: 5W</div>
+                            <div class="specs-item">Solar Panel: 5V/4.5W Monocrystalline</div>
+                            <div class="specs-item">Battery: 5AH/3.2V Lithium</div>
+                            <div class="specs-item">Lighting Time: 15-20 hours</div>
+                        </div>
+                        <a href="mailto:your-email@example.com?subject=Inquiry about GT-XQD1001" class="cta-button">Request Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2026 Solar Lighting Manufacturer | Professional B2B Solar Lighting Solutions</p>
+        <p>📧 Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">🌍 Global Shipping | ✅ OEM/ODM Available | 🔧 2-5 Years Warranty</p>
+    </footer>
+</body>
+</html>
