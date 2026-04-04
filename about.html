@@ -19,7 +19,7 @@
         }
         
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3498db 0%, #ecf0f1 100%);
             color: white;
             padding: 3rem 1rem;
             text-align: center;
@@ -71,7 +71,7 @@
         }
         
         .section {
-            background: white;
+            background: linear-gradient(135deg, #3498db 0%, #ecf0f1 100%);
             padding: 3rem;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -80,7 +80,7 @@
         
         .section h2 {
             color: #2c3e50;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 3px solid #2980b9;
             padding-bottom: 0.5rem;
             margin-bottom: 2rem;
             font-size: 2rem;
@@ -89,8 +89,16 @@
         .intro-text {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #555;
+            color: #2c3e50;
             margin-bottom: 2rem;
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .intro-text p {
+            margin-bottom: 1rem;
         }
         
         .stats-grid {
@@ -101,7 +109,7 @@
         }
         
         .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
             color: white;
             padding: 2rem;
             border-radius: 10px;
@@ -132,16 +140,17 @@
         }
         
         .value-card {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            color: white;
         }
         
         .value-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(41, 128, 185, 0.4);
         }
         
         .value-icon {
@@ -150,13 +159,13 @@
         }
         
         .value-card h3 {
-            color: #2c3e50;
+            color: white;
             margin-bottom: 1rem;
             font-size: 1.3rem;
         }
         
         .value-card p {
-            color: #666;
+            color: rgba(255, 255, 255, 0.9);
             font-size: 1rem;
         }
         
@@ -173,7 +182,7 @@
             top: 0;
             height: 100%;
             width: 3px;
-            background: #667eea;
+            background: #2980b9;
         }
         
         .timeline-item {
@@ -188,33 +197,34 @@
             top: 0.5rem;
             width: 1.5rem;
             height: 1.5rem;
-            background: #667eea;
+            background: #2980b9;
             border-radius: 50%;
             border: 3px solid white;
-            box-shadow: 0 0 0 3px #667eea;
+            box-shadow: 0 0 0 3px #2980b9;
         }
         
         .timeline-year {
             font-size: 1.3rem;
             font-weight: bold;
-            color: #667eea;
+            color: #2980b9;
             margin-bottom: 0.5rem;
         }
         
         .timeline-content {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
             padding: 1.5rem;
             border-radius: 10px;
+            color: white;
         }
         
         .timeline-content h4 {
-            color: #2c3e50;
+            color: white;
             margin-bottom: 0.5rem;
             font-size: 1.2rem;
         }
         
         .timeline-content p {
-            color: #666;
+            color: rgba(255, 255, 255, 0.9);
             font-size: 1rem;
         }
         
@@ -226,22 +236,23 @@
         }
         
         .team-card {
-            background: #f8f9fa;
+            background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
             padding: 2rem;
             border-radius: 10px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            color: white;
         }
         
         .team-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(41, 128, 185, 0.4);
         }
         
         .team-avatar {
             width: 120px;
             height: 120px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: rgba(255, 255, 255, 0.3);
             border-radius: 50%;
             margin: 0 auto 1.5rem;
             display: flex;
@@ -252,20 +263,20 @@
         }
         
         .team-card h3 {
-            color: #2c3e50;
+            color: white;
             margin-bottom: 0.5rem;
             font-size: 1.3rem;
         }
         
         .team-card .role {
-            color: #667eea;
+            color: rgba(255, 255, 255, 0.9);
             font-weight: bold;
             margin-bottom: 1rem;
             display: block;
         }
         
         .team-card p {
-            color: #666;
+            color: rgba(255, 255, 255, 0.9);
             font-size: 0.95rem;
         }
         
@@ -278,7 +289,7 @@
         }
         
         .footer a {
-            color: #667eea;
+            color: #3498db;
         }
         
         @media (max-width: 768px) {
@@ -499,7 +510,7 @@
             <h2>✨ Why Choose Us</h2>
             <div class="intro-text">
                 <p>When you partner with us, you gain more than just a supplier – you gain a strategic ally committed to your success. Here's what sets us apart:</p>
-                <ul style="margin-top: 1.5rem; padding-left: 2rem; color: #555; line-height: 2;">
+                <ul style="margin-top: 1.5rem; padding-left: 2rem; line-height: 2;">
                     <li><strong>✅ OEM/ODM Capabilities</strong> - Custom solutions tailored to your market needs</li>
                     <li><strong>✅ Competitive Pricing</strong> - Factory-direct prices with no middleman</li>
                     <li><strong>✅ Fast Delivery</strong> - Efficient logistics and global shipping network</li>
