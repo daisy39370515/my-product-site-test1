@@ -12,98 +12,135 @@
         }
         
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: #f5f5f5;
+            background: #f8f9fa;
+            overflow-x: hidden;
         }
         
         .header {
-            background: linear-gradient(135deg, #3498db 0%, #ecf0f1 100%);
+            background: linear-gradient(135deg, #0a2342 0%, #1e4b87 100%);
             color: white;
-            padding: 3rem 1rem;
+            padding: 4rem 2rem 3rem;
             text-align: center;
         }
         
         .header h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
+            font-weight: 700;
             margin-bottom: 0.5rem;
         }
         
         .header p {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             opacity: 0.95;
         }
         
         .nav {
-            background: #2c3e50;
+            background: #0a2342;
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .nav.scrolled {
+            background: rgba(10, 35, 66, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 0.8rem 0;
         }
         
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: center;
             gap: 1.5rem;
             flex-wrap: wrap;
+            padding: 0 1rem;
         }
         
         .nav a {
             color: white;
             text-decoration: none;
-            padding: 0.5rem 1rem;
+            padding: 0.6rem 1.2rem;
             border-radius: 5px;
-            transition: background 0.3s;
+            transition: all 0.3s;
+            font-weight: 500;
+            position: relative;
+        }
+        
+        .nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        
+        .nav a:hover::after {
+            width: 100%;
         }
         
         .nav a:hover {
-            background: #34495e;
+            background: #1e4b87;
         }
         
         .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
         }
         
         .category {
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
         
         .category h2 {
-            color: #2c3e50;
+            color: #0a2342;
             border-bottom: 3px solid #3498db;
-            padding-bottom: 0.5rem;
-            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
             font-size: 2rem;
+            font-weight: 700;
         }
         
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
         }
         
         .product-card {
-            border: 1px solid #ddd;
-            border-radius: 10px;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             background: white;
+            border: 2px solid transparent;
         }
         
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: #3498db;
         }
         
         .product-image {
@@ -113,7 +150,11 @@
             object-position: center;
             background: #f5f5f5;
             display: block;
-            image-rendering: -webkit-optimize-contrast;
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
         }
         
         .product-info {
@@ -122,28 +163,38 @@
         
         .product-info .model {
             color: #3498db;
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.8rem;
             display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         .product-info h3 {
-            color: #2c3e50;
+            color: #0a2342;
             margin-bottom: 1rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-weight: 600;
         }
         
         .specs {
             font-size: 0.95rem;
             color: #666;
             margin-bottom: 1.5rem;
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
         }
         
         .specs-item {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
             padding-left: 1.5rem;
             position: relative;
+        }
+        
+        .specs-item:last-child {
+            margin-bottom: 0;
         }
         
         .specs-item::before {
@@ -152,62 +203,86 @@
             left: 0;
             color: #3498db;
             font-weight: bold;
+            font-size: 1.2rem;
         }
         
         .cta-button {
             display: inline-block;
             background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             color: white;
-            padding: 0.8rem 2rem;
+            padding: 0.9rem 2rem;
             text-decoration: none;
             border-radius: 25px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             width: 100%;
             text-align: center;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
         }
         
         .cta-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            box-shadow: 0 5px 20px rgba(52, 152, 219, 0.5);
         }
         
         .footer {
-            background: #2c3e50;
+            background: #0a2342;
             color: white;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
+            padding: 3rem 2rem;
+            margin-top: 5rem;
         }
         
         .footer a {
             color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        .footer p {
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
         }
         
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
                 align-items: center;
-                gap: 0.5rem;
+                gap: 0.8rem;
+                padding: 0 1rem;
             }
             
             .header h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
             }
             
             .product-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .category {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>🌟 Solar Lighting Products</h1>
+        <h1>Solar Lighting Products</h1>
         <p>Professional Solar Lighting Solutions for Global B2B Customers</p>
     </div>
     
-    <nav class="nav">
+    <nav class="nav" id="navbar">
         <div class="nav-container">
             <a href="index.html">Home</a>
             <a href="#courtyard-lights">Courtyard Lights</a>
@@ -221,9 +296,9 @@
     </nav>
     
     <div class="container">
-        <!-- 庭院灯 -->
+        <!-- Courtyard Lights -->
         <section class="category" id="courtyard-lights">
-            <h2>🏡 Courtyard Lights</h2>
+            <h2>Courtyard Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/courtyard-lights/1.jpg" alt="Courtyard Light" class="product-image">
@@ -287,9 +362,9 @@
             </div>
         </section>
         
-        <!-- 草坪灯 -->
+        <!-- Lawn Lights -->
         <section class="category" id="lawn-lights">
-            <h2>🌿 Lawn Lights</h2>
+            <h2>Lawn Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/lawn-lights/1.jpg" alt="Lawn Light" class="product-image">
@@ -353,9 +428,9 @@
             </div>
         </section>
         
-        <!-- 壁灯 -->
+        <!-- Wall Lights -->
         <section class="category" id="wall-lights">
-            <h2>💡 Wall Lights</h2>
+            <h2>Wall Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/wall-lights/1.jpg" alt="Wall Light" class="product-image">
@@ -404,9 +479,9 @@
             </div>
         </section>
         
-        <!-- 柱头灯 -->
+        <!-- Pillar Lights -->
         <section class="category" id="pillar-lights">
-            <h2>🔆 Pillar Lights</h2>
+            <h2>Pillar Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/pillar-lights/1.jpg" alt="Pillar Light" class="product-image">
@@ -470,9 +545,9 @@
             </div>
         </section>
         
-        <!-- 洗墙灯 -->
+        <!-- Wall Washer -->
         <section class="category" id="wall-washer">
-            <h2>🎨 Solar Wall Washer</h2>
+            <h2>Solar Wall Washer</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/wall-washer/1.jpg" alt="Wall Washer" class="product-image">
@@ -491,9 +566,9 @@
             </div>
         </section>
         
-        <!-- 路灯 -->
+        <!-- Street Lights -->
         <section class="category" id="street-lights">
-            <h2>🚦 Street Lights</h2>
+            <h2>Street Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/street-lights-and-hand-lantern/GT-TGD106-50W.JPG" alt="Street Light" class="product-image">
@@ -633,7 +708,9 @@
             </div>
         </section>
         
-            <h2>🔦 Portable Lights</h2>
+        <!-- Portable Lights -->
+        <section class="category" id="portable-lights">
+            <h2>Portable Lights</h2>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="images/street-lights-and-hand-lantern/GT-STD106B.JPG" alt="Portable Light" class="product-image">
@@ -674,8 +751,20 @@
     
     <footer class="footer">
         <p>&copy; 2026 Solar Lighting Manufacturer | Professional B2B Solar Lighting Solutions</p>
-        <p>📧 Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        <p style="margin-top: 1rem; opacity: 0.8;">🌍 Global Shipping | ✅ OEM/ODM Available | 🔧 2-5 Years Warranty</p>
+        <p>Contact: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+        <p style="margin-top: 1rem; opacity: 0.8;">Global Shipping | OEM/ODM Available | 2-5 Years Warranty</p>
     </footer>
+    
+    <script>
+        // Navigation scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 </html>

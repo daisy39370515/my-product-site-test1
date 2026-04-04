@@ -89,47 +89,21 @@
             background: #1e4b87;
         }
         
-        /* Hero Section with Video Background */
+        /* Hero Section */
         .hero {
             position: relative;
-            height: 100vh;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            padding: 8rem 2rem 6rem;
             text-align: center;
+            background: linear-gradient(135deg, #0a2342 0%, #1e4b87 100%);
+            color: white;
             overflow: hidden;
-        }
-        
-        .video-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(10, 35, 66, 0.85) 0%, rgba(30, 75, 135, 0.75) 100%);
-            z-index: 1;
         }
         
         .hero-content {
             position: relative;
             z-index: 2;
-            color: white;
-            padding: 2rem;
             max-width: 1000px;
-            opacity: 0;
-            transform: translateY(30px);
-            animation: fadeInUp 1s ease forwards;
+            margin: 0 auto 4rem;
         }
         
         .hero-content h1 {
@@ -149,14 +123,10 @@
         }
         
         .hero-buttons {
-            position: relative;
-            z-index: 1;
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
-            opacity: 0;
-            animation: fadeInUp 1s ease 0.3s forwards;
         }
         
         .btn {
@@ -193,19 +163,27 @@
             color: white;
         }
         
+        /* Hero Video */
+        .hero-video {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .hero-video video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
         /* Features Banner */
         .features-banner {
             background: linear-gradient(135deg, #3498db 0%, #ecf0f1 100%);
             padding: 3rem 2rem;
             text-align: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
-        }
-        
-        .features-banner.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
         
         .features-banner h2 {
@@ -221,8 +199,8 @@
             margin: 0 auto;
         }
         
-        /* Product Collections */
-        .collections-section {
+        /* Photo Gallery */
+        .gallery-section {
             padding: 5rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
@@ -231,14 +209,6 @@
         .section-title {
             text-align: center;
             margin-bottom: 4rem;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .section-title.visible {
-            opacity: 1;
-            transform: translateY(0);
         }
         
         .section-title h2 {
@@ -262,399 +232,57 @@
             border-radius: 2px;
         }
         
-        .collections-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-        
-        .collection-card {
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            cursor: pointer;
-            height: 400px;
-            border: 3px solid transparent;
-            opacity: 0;
-            transform: translateY(50px);
-        }
-        
-        .collection-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .collection-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-            border-color: #3498db;
-        }
-        
-        .collection-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .collection-card:hover img {
-            transform: scale(1.1);
-        }
-        
-        .collection-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(10, 35, 66, 0.95));
-            padding: 2rem;
-            color: white;
-            transition: transform 0.3s ease;
-        }
-        
-        .collection-card:hover .collection-overlay {
-            transform: translateY(-5px);
-        }
-        
-        .collection-overlay h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
-            transition: color 0.3s ease;
-        }
-        
-        .collection-card:hover .collection-overlay h3 {
-            color: #3498db;
-        }
-        
-        .collection-overlay p {
-            opacity: 0.9;
-            font-size: 1rem;
-            transition: opacity 0.3s ease;
-        }
-        
-        .collection-card:hover .collection-overlay p {
-            opacity: 1;
-        }
-        
-        /* Section Styles */
-        .section {
-            padding: 5rem 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        /* Photo Gallery */
-        .gallery-section {
-            padding: 5rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 4rem;
         }
         
-        .gallery-section-title {
-            grid-column: 1 / -1;
-            text-align: center;
-            margin-bottom: 2rem;
+        .gallery-group {
+            width: 100%;
+        }
+        
+        .gallery-title {
             color: #0a2342;
             font-size: 2rem;
-            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: bold;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #3498db;
+            display: inline-block;
+        }
+        
+        .gallery-title-wrapper {
+            text-align: center;
+            margin-bottom: 2rem;
         }
         
         .gallery-images {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-        }
-        
-        .gallery-images img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-images img:hover {
-            transform: scale(1.05);
-        }
-        
-        /* About Section */
-        .about-section {
-            background: white;
-            margin: 2rem auto;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 4rem;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
-        }
-        
-        .about-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-content h3 {
-            font-size: 2rem;
-            color: #0a2342;
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-content p {
-            color: #666;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-        
-        .about-stats {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .stat-item {
-            text-align: center;
-            padding: 1.5rem;
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            color: white;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        
-        .stat-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-        
-        /* Products Section */
-        .products-grid {
-            display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            width: 100%;
         }
         
-        .product-card {
-            background: white;
-            border-radius: 10px;
+        .gallery-image {
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-            opacity: 0;
-            transform: translateY(30px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
         }
         
-        .product-card.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .gallery-image:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
         }
         
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-        }
-        
-        .product-image {
+        .gallery-image img {
             width: 100%;
             height: 250px;
             object-fit: cover;
-            background: #f5f5f5;
-        }
-        
-        .product-info {
-            padding: 1.5rem;
-        }
-        
-        .product-info h3 {
-            color: #0a2342;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .product-info p {
-            color: #666;
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .product-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            color: white;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: transform 0.3s;
-            width: 100%;
-            text-align: center;
-        }
-        
-        .product-link:hover {
-            transform: scale(1.05);
-        }
-        
-        /* Features Section */
-        .features-section {
-            background: linear-gradient(135deg, #0a2342 0%, #1e4b87 100%);
-            color: white;
-            border-radius: 10px;
-            margin: 2rem auto;
-            padding: 4rem;
-        }
-        
-        .features-section .section-title h2,
-        .features-section .section-title p {
-            color: white;
-        }
-        
-        .features-section .section-title .divider {
-            background: white;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
-            background: rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s, background 0.3s;
-            backdrop-filter: blur(10px);
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        
-        .feature-card.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.15);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card p {
-            opacity: 0.9;
-            font-size: 0.95rem;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: white;
-            padding: 5rem 2rem;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin: 2rem auto;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-        
-        .cta-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .cta-section h2 {
-            font-size: 2.5rem;
-            color: #0a2342;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
-            color: #666;
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #0a2342;
-            color: white;
-            padding: 3rem 2rem;
-            margin-top: 0;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: white;
-        }
-        
-        .footer p {
-            text-align: center;
-            opacity: 0.8;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            display: block;
         }
         
         /* Responsive */
@@ -680,13 +308,17 @@
                 font-size: 2rem;
             }
             
-            .about-grid,
-            .about-stats {
-                grid-template-columns: 1fr;
-            }
-            
             .hero-buttons {
                 flex-direction: column;
+            }
+            
+            .gallery-images {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+            
+            .gallery-image img {
+                height: 200px;
             }
         }
     </style>
@@ -705,13 +337,8 @@
         </div>
     </nav>
     
-    <!-- Hero Section with Video Background -->
+    <!-- Hero Section -->
     <section class="hero">
-        <video class="video-background" autoplay muted loop playsinline>
-            <source src="images/exhibition-photos/hero-video.mp4" type="video/mp4">
-            Your 浏览器 does not support the video tag.
-        </video>
-        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Premium Outdoor Solar Lighting Solutions</h1>
             <p>High-quality solar lighting products for residential, commercial, and industrial applications worldwide. Sustainable, efficient, and reliable.</p>
@@ -720,254 +347,102 @@
                 <a href="contact.html" class="btn btn-secondary">Get a Quote</a>
             </div>
         </div>
+        
+        <!-- Hero Video -->
+        <div class="hero-video">
+            <video autoplay muted loop playsinline>
+                <source src="images/exhibition-photos/hero-video.mp4" type="video/mp4">
+                Your 浏览器 does not support the video tag.
+            </video>
+        </div>
     </section>
     
     <!-- Features Banner -->
-    <section class="features-banner" id="features-banner">
+    <section class="features-banner">
         <h2>Transform Your Outdoor Space</h2>
         <p>Affordable, stylish, and quality solar lighting. Essential decor you'll adore. Brighten up your outdoor spaces with our premium solar solutions.</p>
     </section>
     
-    <!-- Product Collections -->
-    <section class="collections-section">
-        <div class="section-title" id="collections-title">
-            <h2>Solar Light Collections</h2>
-            <p>Discover our range of premium solar lighting solutions for every outdoor need</p>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="collections-grid">
-            <div class="collection-card" onclick="window.location.href='products.html#courtyard-lights'" id="card-1">
-                <img src="images/courtyard-lights/1.jpg" alt="Courtyard Lights">
-                <div class="collection-overlay">
-                    <h3>Courtyard Lights</h3>
-                    <p>Elegant lighting for gardens and patios</p>
-                </div>
-            </div>
-            
-            <div class="collection-card" onclick="window.location.href='products.html#lawn-lights'" id="card-2">
-                <img src="images/lawn-lights/1.jpg" alt="Lawn Lights">
-                <div class="collection-overlay">
-                    <h3>Lawn Lights</h3>
-                    <p>Beautiful decorative lighting for pathways</p>
-                </div>
-            </div>
-            
-            <div class="collection-card" onclick="window.location.href='products.html#wall-lights'" id="card-3">
-                <img src="images/wall-lights/1.jpg" alt="Wall Lights">
-                <div class="collection-overlay">
-                    <h3>Wall Lights</h3>
-                    <p>Stylish wall-mounted solar lights</p>
-                </div>
-            </div>
-            
-            <div class="collection-card" onclick="window.location.href='products.html#pillar-lights'" id="card-4">
-                <img src="images/pillar-lights/1.jpg" alt="Pillar Lights">
-                <div class="collection-overlay">
-                    <h3>Pillar Lights</h3>
-                    <p>Durable lights for gates and fences</p>
-                </div>
-            </div>
-            
-            <div class="collection-card" onclick="window.location.href='products.html#street-lights'" id="card-5">
-                <img src="images/street-lights-and-hand-lantern/GT-TGD106-50W.JPG" alt="Street Lights">
-                <div class="collection-overlay">
-                    <h3>Street Lights</h3>
-                    <p>High-powered lighting for roads and pathways</p>
-                </div>
-            </div>
-            
-            <div class="collection-card" onclick="window.location.href='products.html#portable-lights'" id="card-6">
-                <img src="images/street-lights-and-hand-lantern/GT-STD106B.JPG" alt="Portable Lights">
-                <div class="collection-overlay">
-                    <h3>Portable Lights</h3>
-                    <p>Rechargeable lights for any location</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- About Section -->
-    <section class="section">
-        <div class="about-section" id="about-section">
-            <div class="about-grid">
-                <div class="about-content">
-                    <h3>About Our Company</h3>
-                    <p>
-                        Founded in 2010, we are a leading manufacturer and supplier of high-quality solar lighting solutions. With over 15 years of experience in the solar energy industry, we specialize in designing, developing, and producing innovative solar lighting products for residential, commercial, and industrial applications worldwide.
-                    </p>
-                    <p>
-                        Our mission is to provide sustainable, energy-efficient lighting solutions that reduce carbon footprint while delivering exceptional performance and reliability. We serve B2B customers across more than 80 countries, including solar lighting distributors, contractors, project developers, and government agencies.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number">15+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">80+</div>
-                            <div class="stat-label">Countries Served</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">500+</div>
-                            <div class="stat-label">Happy Clients</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">1M+</div>
-                            <div class="stat-label">Products Sold</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Featured Products -->
-    <section class="section">
-        <div class="section-title" id="products-title">
-            <h2>Featured Products</h2>
-            <p>Discover our most popular and innovative solar lighting solutions</p>
-            <div class="divider"></div>
-        </div>
-        
-        <div class="products-grid">
-            <div class="product-card" id="product-1">
-                <img src="images/courtyard-lights/1.jpg" alt="Courtyard Light" class="product-image">
-                <div class="product-info">
-                    <h3>Courtyard Lights</h3>
-                    <p>Elegant and energy-efficient courtyard lighting solutions for gardens, parks, and outdoor spaces.</p>
-                    <a href="products.html#courtyard-lights" class="product-link">View Details</a>
-                </div>
-            </div>
-            
-            <div class="product-card" id="product-2">
-                <img src="images/lawn-lights/1.jpg" alt="Lawn Light" class="product-image">
-                <div class="product-info">
-                    <h3>Lawn Lights</h3>
-                    <p>Beautiful decorative lawn lights perfect for pathways, driveways, and garden borders.</p>
-                    <a href="products.html#lawn-lights" class="product-link">View Details</a>
-                </div>
-            </div>
-            
-            <div class="product-card" id="product-3">
-                <img src="images/wall-lights/1.jpg" alt="Wall Light" class="product-image">
-                <div class="product-info">
-                    <h3>Wall Lights</h3>
-                    <p>Stylish wall-mounted solar lights for exterior walls, entrances, and building facades.</p>
-                    <a href="products.html#wall-lights" class="product-link">View Details</a>
-                </div>
-            </div>
-            
-            <div class="product-card" id="product-4">
-                <img src="images/pillar-lights/1.jpg" alt="Pillar Light" class="product-image">
-                <div class="product-info">
-                    <h3>Pillar Lights</h3>
-                    <p>Durable and attractive pillar lights for gates, fences, and outdoor pillars.</p>
-                    <a href="products.html#pillar-lights" class="product-link">View Details</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- Photo Gallery -->
     <section class="gallery-section">
-        <div class="section-title" id="gallery-title">
+        <div class="section-title">
             <h2>Our Factory & Exhibition</h2>
             <p>Take a look at our manufacturing facility and exhibition highlights</p>
             <div class="divider"></div>
         </div>
         
-        <div class="gallery-grid">
-            <div class="gallery-section-title">Factory Photos</div>
+        <!-- Factory Photos -->
+        <div class="gallery-group">
+            <div class="gallery-title-wrapper">
+                <div class="gallery-title">Factory Photos</div>
+            </div>
             <div class="gallery-images">
-                <img src="images/factory-photos/工厂1.jpg" alt="Factory">
-                <img src="images/factory-photos/工厂2.jpg" alt="Factory">
-                <img src="images/factory-photos/工厂3.jpg" alt="Factory">
-                <img src="images/factory-photos/工厂4.jpg" alt="Factory">
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂1.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂2.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂3.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂4.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂5.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂6.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂7.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂8.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂10.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂11.jpg" alt="Factory">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/factory-photos/工厂12.jpg" alt="Factory">
+                </div>
             </div>
-            
-            <div class="gallery-section-title">Exhibition Photos</div>
+        </div>
+        
+        <!-- Exhibition Photos -->
+        <div class="gallery-group">
+            <div class="gallery-title-wrapper">
+                <div class="gallery-title">Exhibition Photos</div>
+            </div>
             <div class="gallery-images">
-                <img src="images/exhibition-photos/展览2-庭院灯.jpg" alt="Exhibition">
-                <img src="images/exhibition-photos/展览3-柱头灯.jpg" alt="Exhibition">
-                <img src="images/exhibition-photos/展览4-草坪灯.jpg" alt="Exhibition">
-                <img src="images/exhibition-photos/展览5-草坪灯.jpg" alt="Exhibition">
-            </div>
-        </div>
-    </section>
-    
-    <!-- Why Choose Us -->
-    <section class="section">
-        <div class="features-section">
-            <div class="section-title" id="why-title">
-                <h2>Why Choose Us</h2>
-                <p>What sets us apart from other solar lighting manufacturers</p>
-                <div class="divider"></div>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card" id="feature-1">
-                    <div class="feature-icon">Eco</div>
-                    <h3>Eco-Friendly</h3>
-                    <p>100% solar-powered solutions that reduce carbon footprint and promote sustainable living.</p>
+                <div class="gallery-image">
+                    <img src="images/exhibition-photos/展览2-庭院灯.jpg" alt="Exhibition">
                 </div>
-                
-                <div class="feature-card" id="feature-2">
-                    <div class="feature-icon">Energy</div>
-                    <h3>Energy Efficient</h3>
-                    <p>High-efficiency solar panels and LED technology for maximum energy savings.</p>
+                <div class="gallery-image">
+                    <img src="images/exhibition-photos/展览3-柱头灯.jpg" alt="Exhibition">
                 </div>
-                
-                <div class="feature-card" id="feature-3">
-                    <div class="feature-icon">Quality</div>
-                    <h3>Durable Quality</h3>
-                    <p>Rust-resistant, weatherproof designs built to withstand harsh outdoor conditions.</p>
+                <div class="gallery-image">
+                    <img src="images/exhibition-photos/展览4-草坪灯.jpg" alt="Exhibition">
                 </div>
-                
-                <div class="feature-card" id="feature-4">
-                    <div class="feature-icon">Savings</div>
-                    <h3>Cost-Effective</h3>
-                    <p>Zero electricity costs and minimal maintenance requirements for long-term savings.</p>
+                <div class="gallery-image">
+                    <img src="images/exhibition-photos/展览5-草坪灯.jpg" alt="Exhibition">
                 </div>
-                
-                <div class="feature-card" id="feature-5">
-                    <div class="feature-icon">Install</div>
-                    <h3>Easy Installation</h3>
-                    <p>Simple installation process with no wiring required. DIY-friendly setup.</p>
+                <div class="gallery-image">
+                    <img src="images/exhibition-photos/展览6-草坪灯.jpg" alt="Exhibition">
                 </div>
-                
-                <div class="feature-card" id="feature-6">
-                    <div class="feature-icon">Custom</div>
-                    <h3>Custom Solutions</h3>
-                    <p>OEM/ODM capabilities to meet your specific project requirements and market needs.</p>
+                <div class="gallery-image">
+                    <img src="images/exhibition-photos/展览7-草坪灯.jpg" alt="Exhibition">
+                </div>
+                <div class="gallery-image">
+                    <img src="images/exhibition-photos/展览8-灯头.jpg" alt="Exhibition">
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- CTA Section -->
-    <section class="section">
-        <div class="cta-section" id="cta-section">
-            <h2>Ready to Light Up Your Project?</h2>
-            <p>Get in touch with our team for a free consultation and quote. We're here to help you find the perfect solar lighting solution for your needs.</p>
-            <div class="hero-buttons">
-                <a href="contact.html" class="btn btn-primary">Contact Us Now</a>
-                <a href="products.html" class="btn btn-secondary">Browse Products</a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="about.html">About Us</a>
-            <a href="contact.html">Contact</a>
-        </div>
-        <p>&copy; 2026 Solar Lighting Manufacturer. All rights reserved.</p>
-        <p style="margin-top: 1rem; opacity: 0.8;">Global Shipping | OEM/ODM Available | 2-5 Years Warranty</p>
-    </footer>
     
     <script>
         // Navigation scroll effect
@@ -978,33 +453,6 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
-        });
-        
-        // Intersection Observer for scroll animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all elements with scroll animations
-        const animatedElements = document.querySelectorAll(
-            '.features-banner, .section-title, .collection-card, .about-section, .product-card, .feature-card, .cta-section'
-        );
-        
-        animatedElements.forEach(el => observer.observe(el));
-        
-        // Stagger animation for cards
-        const cards = document.querySelectorAll('.collection-card, .product-card, .feature-card');
-        cards.forEach((card, index) => {
-            card.style.transitionDelay = `${index * 0.1}s`;
         });
     </script>
 </body>
