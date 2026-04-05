@@ -67,6 +67,9 @@
         .gallery-category { background: #f8f9fa; padding: 1.5rem; border-radius: 15px; }
         .gallery-category h3 { color: #333 !important; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 1rem; }
         .gallery-images { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; }
+        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        padding-bottom: 1rem; /* 给滚动条留空间 */
+        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
         .gallery-images img { width: 100%; height: 250px; object-fit: contain; border-radius: 12px; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f9fa; padding: 5px; }
         .gallery-images img:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.2); z-index: 2; }
         
@@ -98,6 +101,9 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .gallery-images { grid-template-columns: repeat(3, 1fr); }
+        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        padding-bottom: 1rem; /* 给滚动条留空间 */
+        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
         }
         @media (max-width: 968px) {
             .gallery-grid { grid-template-columns: 1fr; }
@@ -111,10 +117,16 @@
             .nav-links { flex-direction: column; align-items: center; width: 100%; }
             .features-grid { grid-template-columns: 1fr; }
             .gallery-images { grid-template-columns: repeat(2, 1fr); }
+        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        padding-bottom: 1rem; /* 给滚动条留空间 */
+        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
         }
         
         @media (max-width: 480px) {
             .gallery-images { grid-template-columns: 1fr; }
+        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        padding-bottom: 1rem; /* 给滚动条留空间 */
+        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
         }
         /* 新增：视频背景基础样式 */
         #video-background-container {
