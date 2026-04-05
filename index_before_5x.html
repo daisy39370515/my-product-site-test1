@@ -25,14 +25,14 @@
         .cta-button.secondary:hover { background: white; color: #0a2342; transform: translateY(-3px); }
         
         /* Navigation - 已修复logo显示问题 */
-        .nav { background: rgba(173, 216, 230, 0.88); padding: 0.6rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
-        .nav.scrolled { background: rgba(10, 35, 66, 0.95); backdrop-filter: blur(10px); padding: 0.4rem 0; }
+        .nav { background: #3498db; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
+        .nav.scrolled { background: rgba(52, 152, 219, 0.95); backdrop-filter: blur(10px); padding: 0.8rem 0; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 1rem; }
         .nav-links { display: flex; gap: 1.5rem; }
         .nav a { color: white; text-decoration: none; padding: 0.6rem 1.2rem; border-radius: 5px; transition: all 0.3s ease; font-weight: 500; position: relative; }
         .nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 2px; background: #3498db; transition: all 0.3s ease; transform: translateX(-50%); }
         .nav a:hover::after { width: 100%; }
-        .nav a:hover { background: #1e4b87; }
+        .nav a:hover { background: #2980b9; }
         
         /* Features Section - 已修复文字颜色问题 */
         .features { padding: 5rem 2rem; background: white; }
@@ -62,12 +62,12 @@
         .category-card a:hover { color: white; text-decoration: underline; }
         
         /* Gallery Section - Factory & Exhibition - 已修复图片路径和文字颜色 */
-        .gallery-section { padding: 4rem 1.5rem; background: white; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem; }
-        .gallery-category { background: #f8f9fa; padding: 1.5rem; border-radius: 15px; }
+        .gallery-section { padding: 3rem 1.5rem; background: white; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem; margin-top: 1.2rem; }
+        .gallery-category { background: #f8f9fa; padding: 0.8rem; border-radius: 15px; }
         .gallery-category h3 { color: #333 !important; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 1rem; }
-        .gallery-images { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; }
-        .gallery-images img { width: 100%; height: 250px; object-fit: contain; border-radius: 12px; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f9fa; padding: 5px; }
+        .gallery-images { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.4rem; margin-top: 0.4rem; }
+        .gallery-images img { width: 100%; height: 280px; object-fit: contain; border-radius: 12px; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f9fa; padding: 5px; }
         .gallery-images img:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.2); z-index: 2; }
         
         /* CTA Section */
@@ -179,10 +179,7 @@
         }
         
         .brand-logo img {
-            height: 90px;
-        clip-path: inset(33.33% 0 33.33% 0);
-        transform: scale(1.8);
-        transform-origin: center;
+            height: 12.5rem;
             width: auto;
             object-fit: contain;
             transition: transform 0.3s ease;
@@ -225,10 +222,7 @@
             }
             
             .brand-logo img {
-                height: 78.75px;
-        clip-path: inset(33.33% 0 33.33% 0);
-        transform: scale(1.8);
-        transform-origin: center;
+                height: 10rem;
             }
             
             .brand-name {
@@ -238,6 +232,22 @@
             .footer-brand-name {
                 font-size: 1.5rem;
             }
+        }
+        /* Logo白底透明化滤镜 - 统一应用 */
+        .brand-logo img,
+        .footer-logo {
+            filter: drop-shadow(0 0 0.1px #000);
+            mix-blend-mode: multiply;
+            width: auto;  /* 保持宽高比 */
+        }
+        /* Logo裁剪与放大 - 保留中间1/3区域并放大 */\
+        .brand-container .brand-logo img,\
+        .footer-logo {\
+            clip-path: inset(30% 0 30% 0);  /* 裁剪掉上下各33.33% */\
+            transform: scale(2);               /* 放大至原尺寸1.8倍 */\
+            transform-origin: center;            /* 以中心点为缩放基准 */\
+            filter: drop-shadow(0 0 0.1px #000); /* 保持透明滤镜 */\
+            mix-blend-mode: multiply;\
         }
     </style>
 </head>
