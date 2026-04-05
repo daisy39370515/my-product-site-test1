@@ -240,6 +240,15 @@
             mix-blend-mode: multiply;
             width: auto;  /* 保持宽高比 */
         }
+        /* Logo裁剪与放大 - 保留中间1/3区域并放大 */\
+        .brand-container .brand-logo img,\
+        .footer-logo {\
+            clip-path: inset(30% 0 30% 0);  /* 裁剪掉上下各33.33% */\
+            transform: scale(2);               /* 放大至原尺寸1.8倍 */\
+            transform-origin: center;            /* 以中心点为缩放基准 */\
+            filter: drop-shadow(0 0 0.1px #000); /* 保持透明滤镜 */\
+            mix-blend-mode: multiply;\
+        }
     </style>
 </head>
 <body>
