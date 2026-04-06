@@ -1,17 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TUOHYCIN | Professional Solar Lighting Solutions</title>
-    <!-- Logo路径说明：如果logo不显示，请检查TUOHYCIN-logo.jpg文件是否在仓库根目录或assets/images/logo/目录 -->
-    <!-- 原有样式完全保留，已修复文字颜色问题 -->
+    <!-- Main homepage styles -->
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --nav-height: 88px; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; overflow-x: hidden; }
         
         /* Hero Section with Video Background */
-        .hero { position: relative; width: 100%; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
+        .hero { position: relative; width: 100%; min-height: calc(100vh - var(--nav-height)); overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; }
         .video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
         .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: transparent; z-index: 1; }
         .hero-content { position: relative; z-index: 2; color: white; max-width: 900px; padding: 0 2rem; animation: fadeInUp 1s ease; }
@@ -24,7 +24,7 @@
         .cta-button.secondary { background: rgba(255,255,255,0.2); color: white; border: 2px solid white; backdrop-filter: blur(10px); }
         .cta-button.secondary:hover { background: white; color: #0a2342; transform: translateY(-3px); }
         
-        /* Navigation - 已修复logo显示问题 */
+        /* Navigation */
         .nav { background: #ffffff; padding: 0.6rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.2); transition: all 0.3s ease; }
         .nav.scrolled { background: #ffffff; backdrop-filter: blur(10px); padding: 0.4rem 0; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 1rem; }
@@ -34,7 +34,7 @@
         .nav a:hover::after { width: 100%; }
         .nav a:hover { background: #f0f8ff; }
         
-        /* Features Section - 已修复文字颜色问题 */
+        /* Features Section */
         .features { padding: 5rem 2rem; background: white; }
         .container { max-width: 1200px; margin: 0 auto; }
         .section-header { text-align: center; margin-bottom: 4rem; }
@@ -61,17 +61,25 @@
         .category-card a { display: inline-block; color: #3498db; text-decoration: none; font-weight: 600; transition: color 0.3s ease; }
         .category-card a:hover { color: white; text-decoration: underline; }
         
-        /* Gallery Section - Factory & Exhibition - 已修复图片路径和文字颜色 */
+        /* Gallery Section */
         .gallery-section { padding: 4rem 1.5rem; background: white; }
         .gallery-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 2rem; }
         .gallery-category { background: #f8f9fa; padding: 1.5rem; border-radius: 15px; }
         .gallery-category h3 { color: #333 !important; font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; border-bottom: 3px solid #3498db; padding-bottom: 1rem; }
         .gallery-images { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 1rem; }
-        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-        padding-bottom: 1rem; /* 给滚动条留空间 */
-        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
+        ::-webkit-scrollbar { display: none; }
         .gallery-images img { width: 100%; height: 250px; object-fit: contain; border-radius: 12px; transition: all 0.3s ease; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); background-color: #f8f9fa; padding: 5px; }
         .gallery-images img:hover { transform: scale(1.05); box-shadow: 0 8px 25px rgba(0,0,0,0.2); z-index: 2; }
+        .factory-carousel.is-enhanced .gallery-images { display: flex; align-items: center; justify-content: center; position: relative; min-height: 320px; background: #eef3f8; border-radius: 12px; overflow: hidden; }
+        .factory-carousel.is-enhanced .gallery-images img { display: none; width: 100%; height: 320px; object-fit: contain; object-position: center; padding: 0; background-color: transparent; }
+        .factory-carousel.is-enhanced .gallery-images img.active { display: block; }
+        .factory-carousel-controls { display: none; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.25rem; }
+        .factory-carousel.is-enhanced .factory-carousel-controls { display: flex; }
+        .factory-carousel-button { border: none; width: 44px; height: 44px; border-radius: 999px; background: #0a2342; color: #fff; font-size: 1.4rem; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease; }
+        .factory-carousel-button:hover { background: #1e4b87; transform: translateY(-1px); }
+        .factory-carousel-dots { display: flex; align-items: center; justify-content: center; gap: 0.5rem; flex-wrap: wrap; }
+        .factory-carousel-dot { width: 10px; height: 10px; border: none; border-radius: 50%; background: #b8c7d9; cursor: pointer; transition: transform 0.2s ease, background 0.2s ease; }
+        .factory-carousel-dot.active { background: #3498db; transform: scale(1.2); }
         
         /* CTA Section */
         .cta-section { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); padding: 5rem 2rem; text-align: center; color: white; }
@@ -101,15 +109,13 @@
         /* Responsive */
         @media (max-width: 1024px) {
             .gallery-images { grid-template-columns: repeat(3, 1fr); }
-        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-        padding-bottom: 1rem; /* 给滚动条留空间 */
-        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
         }
         @media (max-width: 968px) {
             .gallery-grid { grid-template-columns: 1fr; }
         .product-categories { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 768px) {
+            :root { --nav-height: 132px; }
             .hero-content h1 { font-size: 2rem; }
             .hero-content p { font-size: 1.1rem; }
             .cta-buttons { flex-direction: column; align-items: center; }
@@ -117,48 +123,46 @@
             .nav-links { flex-direction: column; align-items: center; width: 100%; }
             .features-grid { grid-template-columns: 1fr; }
             .gallery-images { grid-template-columns: repeat(2, 1fr); }
-        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-        padding-bottom: 1rem; /* 给滚动条留空间 */
-        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
         }
         
         @media (max-width: 480px) {
+            :root { --nav-height: 150px; }
             .gallery-images { grid-template-columns: 1fr; }
-        ::-webkit-scrollbar { display: none; } /* Chrome/Safari */
-        padding-bottom: 1rem; /* 给滚动条留空间 */
-        scrollbar-width: none; /* Firefox */\        -ms-overflow-style: none; /* IE/Edge */
         }
-        /* 新增：视频背景基础样式 */
+        /* Hero video background */
         #video-background-container {
             position: fixed;
-            top: 3rem;
+            top: var(--nav-height);
             left: 0;
             width: 100%;
-            height: calc(100% - 3rem);
-            z-index: -2; /* 置于最底层 */
+            height: calc(100vh - var(--nav-height));
+            z-index: -2;
             overflow: hidden;
+            pointer-events: none;
         }
         
         #hero-video {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
         
-        /* 强制Hero区域文字为白色以确保可读性 */
+        /* Keep hero copy readable over media */
         .hero, .hero-content, .hero-content h1, .hero-content p, .hero-content .cta-buttons {
             color: white !important;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
         }
         
-        /* 备用图片轮播容器（默认隐藏） */
+        /* Fallback carousel */
         #fallback-carousel {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: -1; /* 视频失败时显示 */
+            z-index: -1;
             display: none;
             overflow: hidden;
         }
@@ -184,7 +188,7 @@
             opacity: 1;
         }
         
-        /* 品牌样式覆盖 */
+        /* Brand overrides */
         .brand-container {
             display: flex;
             align-items: center;
@@ -261,22 +265,22 @@
     </style>
 </head>
 <body>
-    <!-- 视频背景容器（新增） -->
+    <!-- 瑙嗛鑳屾櫙瀹瑰櫒锛堟柊澧烇級 -->
     <div id="video-background-container">
-        <video id="hero-video" playsinline muted loop autoplay preload="auto" playsinline webkit-playsinline>
+        <video id="hero-video" playsinline muted loop autoplay preload="metadata" playsinline webkit-playsinline>
             <source src="images/exhibition-photos/hero-video.mp4" type="video/mp4">
-            您的浏览器不支持视频标签，将自动切换到备用图片轮播。
+            Your browser does not support background video playback. A fallback carousel will be shown instead.
         </video>
     </div>
     
-    <!-- 备用图片轮播容器（新增，默认隐藏） -->
+    <!-- 澶囩敤鍥剧墖杞挱瀹瑰櫒锛堟柊澧烇紝榛樿闅愯棌锛?-->
     <div id="fallback-carousel">
         <div class="carousel-images">
-            <!-- 图片将由JavaScript动态加载 -->
+            <!-- Fallback images are injected by JavaScript -->
         </div>
     </div>
     
-    <!-- 导航栏 - 添加品牌logo和名称 -->
+    <!-- 瀵艰埅鏍?- 娣诲姞鍝佺墝logo鍜屽悕绉?-->
     <header class="nav" id="navbar">
         <div class="nav-container">
             <div class="brand-container">
@@ -311,7 +315,7 @@
             </div>
         </section>
         
-        <!-- Gallery Section - Factory & Exhibition (调整到前面) -->
+        <!-- Gallery Section - Factory & Exhibition (璋冩暣鍒板墠闈? -->
         <section class="gallery-section">
             <div class="container">
                 <div class="section-header scroll-animate">
@@ -320,34 +324,42 @@
                     <div class="divider"></div>
                 </div>
                 <div class="gallery-grid">
-                    <div class="gallery-category scroll-animate">
+                    <div class="gallery-category scroll-animate factory-carousel" id="factory-carousel" data-carousel-source="factory">
                         <h3>Factory Photos</h3>
                         <div class="gallery-images">
-                            <!-- 使用所有factory图片 - 已修复路径 -->
-                            <img src="images/factory-photos/工厂1.jpg" alt="Factory production line">
-                            <img src="images/factory-photos/工厂2.jpg" alt="Quality control process">
-                            <img src="images/factory-photos/工厂3.jpg" alt="Assembly area">
-                            <img src="images/factory-photos/工厂4.jpg" alt="Packaging department">
-                            <img src="images/factory-photos/工厂5.jpg" alt="Production equipment">
-                            <img src="images/factory-photos/工厂6.jpg" alt="Quality testing">
-                            <img src="images/factory-photos/工厂7.jpg" alt="Worker assembly">
-                            <img src="images/factory-photos/工厂8.jpg" alt="Final inspection">
-                            <img src="images/factory-photos/工厂10.jpg" alt="Warehouse storage">
-                            <img src="images/factory-photos/工厂11.jpg" alt="Team meeting">
-                            <img src="images/factory-photos/工厂12.jpg" alt="Factory overview">
+                            <img src="images/factory-photos/factory-01.jpg" alt="Factory production line">
+                            <img src="images/factory-photos/factory-02.jpg" alt="Quality control process">
+                            <img src="images/factory-photos/factory-03.jpg" alt="Assembly area">
+                            <img src="images/factory-photos/factory-04.jpg" alt="Packaging department">
+                            <img src="images/factory-photos/factory-05.jpg" alt="Production equipment">
+                            <img src="images/factory-photos/factory-06.jpg" alt="Quality testing">
+                            <img src="images/factory-photos/factory-07.jpg" alt="Worker assembly">
+                            <img src="images/factory-photos/factory-08.jpg" alt="Final inspection">
+                            <img src="images/factory-photos/factory-10.jpg" alt="Warehouse storage">
+                            <img src="images/factory-photos/factory-11.jpg" alt="Team meeting">
+                            <img src="images/factory-photos/factory-12.jpg" alt="Factory overview">
+                        </div>
+                        <div class="factory-carousel-controls" aria-label="Factory photos carousel controls">
+                            <button type="button" class="factory-carousel-button" data-carousel-action="prev" aria-label="Previous factory photo">&#8249;</button>
+                            <div class="factory-carousel-dots" aria-label="Factory photo slide navigation"></div>
+                            <button type="button" class="factory-carousel-button" data-carousel-action="next" aria-label="Next factory photo">&#8250;</button>
                         </div>
                     </div>
-                    <div class="gallery-category scroll-animate">
+                    <div class="gallery-category scroll-animate factory-carousel" id="exhibition-carousel" data-carousel-source="exhibition">
                         <h3>Exhibition Photos</h3>
                         <div class="gallery-images">
-                            <!-- 使用所有exhibition图片 - 已修复路径 -->
-                            <img src="images/exhibition-photos/展览2-庭院灯.jpg" alt="Garden lighting exhibition">
-                            <img src="images/exhibition-photos/展览3-柱头灯.jpg" alt="Pillar lights exhibition">
-                            <img src="images/exhibition-photos/展览4-草坪灯.jpg" alt="Lawn lighting exhibition">
-                            <img src="images/exhibition-photos/展览5-草坪灯.jpg" alt="Outdoor lighting showcase">
-                            <img src="images/exhibition-photos/展览6-草坪灯.jpg" alt="Solar lighting display">
-                            <img src="images/exhibition-photos/展览7-草坪灯.jpg" alt="Professional exhibition booth">
-                            <img src="images/exhibition-photos/展览8-灯头.jpg" alt="Light fixture exhibition">
+                            <img src="images/exhibition-photos/exhibition-02-courtyard-light.jpg" alt="Garden lighting exhibition">
+                            <img src="images/exhibition-photos/exhibition-03-pillar-light.jpg" alt="Pillar lights exhibition">
+                            <img src="images/exhibition-photos/exhibition-04-lawn-light.jpg" alt="Lawn lighting exhibition">
+                            <img src="images/exhibition-photos/exhibition-05-lawn-light.jpg" alt="Outdoor lighting showcase">
+                            <img src="images/exhibition-photos/exhibition-06-lawn-light.jpg" alt="Solar lighting display">
+                            <img src="images/exhibition-photos/exhibition-07-lawn-light.jpg" alt="Professional exhibition booth">
+                            <img src="images/exhibition-photos/exhibition-08-lamp-head.jpg" alt="Light fixture exhibition">
+                        </div>
+                        <div class="factory-carousel-controls" aria-label="Exhibition photos carousel controls">
+                            <button type="button" class="factory-carousel-button" data-carousel-action="prev" aria-label="Previous exhibition photo">&#8249;</button>
+                            <div class="factory-carousel-dots" aria-label="Exhibition photo slide navigation"></div>
+                            <button type="button" class="factory-carousel-button" data-carousel-action="next" aria-label="Next exhibition photo">&#8250;</button>
                         </div>
                     </div>
                 </div>
@@ -364,32 +376,32 @@
                 </div>
                 <div class="features-grid">
                     <div class="feature-card scroll-animate">
-                        <div class="feature-icon">☀️</div>
+                        <div class="feature-icon">&#9728;</div>
                         <h3>Solar Powered</h3>
                         <p>100% solar-powered lighting solutions that reduce energy costs and environmental impact. Perfect for sustainable development projects.</p>
                     </div>
                     <div class="feature-card scroll-animate">
-                        <div class="feature-icon">⚡</div>
+                        <div class="feature-icon">&#9889;</div>
                         <h3>High Efficiency</h3>
                         <p>Advanced LED technology with luminous efficiency up to 170 LM/W, ensuring bright and reliable illumination all night long.</p>
                     </div>
                     <div class="feature-card scroll-animate">
-                        <div class="feature-icon">🔧</div>
+                        <div class="feature-icon">&#128268;</div>
                         <h3>Easy Installation</h3>
                         <p>Wireless design makes installation quick and simple. No need for complicated wiring or trenching, saving time and money.</p>
                     </div>
                     <div class="feature-card scroll-animate">
-                        <div class="feature-icon">💪</div>
+                        <div class="feature-icon">&#128077;</div>
                         <h3>Durable Build</h3>
                         <p>IP65 waterproof rating and high-quality materials ensure our lights withstand harsh weather conditions for years.</p>
                     </div>
                     <div class="feature-card scroll-animate">
-                        <div class="feature-icon">🎯</div>
+                        <div class="feature-icon">&#127912;</div>
                         <h3>Custom Solutions</h3>
                         <p>OEM/ODM services available to meet your specific requirements. From design to production, we provide tailored solutions.</p>
                     </div>
                     <div class="feature-card scroll-animate">
-                        <div class="feature-icon">🌍</div>
+                        <div class="feature-icon">&#128666;</div>
                         <h3>Global Shipping</h3>
                         <p>Fast and reliable shipping to over 50 countries worldwide. Complete logistics support for international orders.</p>
                     </div>
@@ -443,7 +455,7 @@
         </section>
     </main>
     
-    <!-- Footer - 增强品牌标识 -->
+    <!-- Footer -->
     <footer class="footer scroll-animate">
         <div class="footer-brand">
             <div class="brand-container">
@@ -453,130 +465,29 @@
             </div>
             <p class="footer-brand-tagline">Professional B2B Solar Lighting Solutions</p>
         </div>
-        <p>© 2026 TUOHYCIN Solar Lighting Manufacturer | Global Shipping | OEM/ODM Available | 2-5 Years Warranty</p>
+        <p>&copy; 2026 TUOHYCIN Solar Lighting Manufacturer | Global Shipping | OEM/ODM Available | 2-5 Years Warranty</p>
         <p>Contact: your-email@example.com</p>
         <p><a href="index.html">Home</a> | <a href="products.html">Products</a> | <a href="about.html">About Us</a> | <a href="contact.html">Contact</a></p>
     </footer>
     
-    <!-- 原有JavaScript脚本（完全保留） -->
-    <script>
-        // Navigation scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // Intersection Observer for scroll animations
-        const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all scroll-animate elements
-        const scrollElements = document.querySelectorAll('.scroll-animate');
-        scrollElements.forEach((element, index) => {
-            element.style.transitionDelay = `${index * 0.1}s`;
-            observer.observe(element);
-        });
-    </script>
-    
-    <!-- 新增：视频背景功能脚本 -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('hero-video');
-            const fallbackCarousel = document.getElementById('fallback-carousel');
-            const carouselImagesContainer = document.querySelector('.carousel-images');
-            
-            // 1. 确保视频自动播放
-            video.play().catch(function(error) {
-                console.log('自动播放被阻止，尝试用户交互后播放:', error);
-            });
-            
-            // 2. 视频加载失败时切换到图片轮播
-            video.addEventListener('error', function() {
-                console.log('视频加载失败，切换到备用图片轮播');
-                
-                // 隐藏视频容器
-                document.getElementById('video-background-container').style.display = 'none';
-                
-                // 显示备用轮播容器
-                fallbackCarousel.style.display = 'block';
-                
-                // 加载图片轮播
-                initCarousel();
-            });
-            
-            // 3. 初始化备用图片轮播
-            function initCarousel() {
-                // 图片路径数组 - 已修复路径，包含所有factory和exhibition图片
-                const imageFiles = [
-                    'images/factory-photos/工厂1.jpg',
-                    'images/factory-photos/工厂2.jpg',
-                    'images/factory-photos/工厂3.jpg',
-                    'images/factory-photos/工厂4.jpg',
-                    'images/factory-photos/工厂5.jpg',
-                    'images/factory-photos/工厂6.jpg',
-                    'images/factory-photos/工厂7.jpg',
-                    'images/factory-photos/工厂8.jpg',
-                    'images/factory-photos/工厂10.jpg',
-                    'images/factory-photos/工厂11.jpg',
-                    'images/factory-photos/工厂12.jpg',
-                    'images/exhibition-photos/展览2-庭院灯.jpg',
-                    'images/exhibition-photos/展览3-柱头灯.jpg',
-                    'images/exhibition-photos/展览4-草坪灯.jpg',
-                    'images/exhibition-photos/展览5-草坪灯.jpg',
-                    'images/exhibition-photos/展览6-草坪灯.jpg',
-                    'images/exhibition-photos/展览7-草坪灯.jpg',
-                    'images/exhibition-photos/展览8-灯头.jpg'
-                ];
-                
-                // 清空现有图片
-                carouselImagesContainer.innerHTML = '';
-                
-                // 创建图片元素
-                imageFiles.forEach(function(src, index) {
-                    const img = document.createElement('img');
-                    img.src = src;
-                    img.alt = '备用背景图 ' + (index + 1);
-                    if (index === 0) {
-                        img.classList.add('active');
-                    }
-                    carouselImagesContainer.appendChild(img);
-                });
-                
-                // 启动轮播
-                let currentIndex = 0;
-                const images = document.querySelectorAll('.carousel-images img');
-                
-                function rotateCarousel() {
-                    // 隐藏当前图片
-                    images[currentIndex].classList.remove('active');
-                    
-                    // 计算下一张图片索引
-                    currentIndex = (currentIndex + 1) % images.length;
-                    
-                    // 显示下一张图片
-                    images[currentIndex].classList.add('active');
-                }
-                
-                // 每5秒切换一张图片
-                setInterval(rotateCarousel, 5000);
-            }
-            
-            // 4. 增强文字可读性（为深色视频区域添加阴影）
-            const heroTextElements = document.querySelectorAll('.hero h1, .hero p, .hero span, .hero a');
-            heroTextElements.forEach(function(element) {
-                element.style.textShadow = '1px 1px 3px rgba(0, 0, 0, 0.7)';
-            });
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
